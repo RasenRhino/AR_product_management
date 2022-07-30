@@ -1,0 +1,24 @@
+<p>make a new section</p>
+<form>
+    <label for="sname">Section name</label><br>
+    <input type="text" id="sname" name="sname" [(ngModel)]="sectionName"><br><br>
+    <br>
+    <br>
+   
+    <li *ngFor="let product of products">
+        <span>Product name: {{product['name']}} &nbsp; &nbsp; Product Price:{{product['price']}}</span>
+    </li>
+    <br>
+    <br>
+    <div class="productinp">
+        <label for="pname">Product name</label><br>
+        <input type="text" id="pname" name="pname" [(ngModel)]="productName"><br><br>
+
+        <label for="pprice">Product price</label><br>
+        <input type="number"  #num id="pprice" name="pprice" [(ngModel)]="productPrice">
+    </div>
+    <button (click)="addproduct()" (click)="num.value=''">add product</button>
+  </form>
+  <br>
+  <br>
+<button (click)="newsection()">add section</button>

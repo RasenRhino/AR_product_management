@@ -1,0 +1,13 @@
+<p>updatesection</p>
+<select #opt (change)="changesec(opt.value)">
+<option *ngFor="let section of sectionList" value={{section}}>{{section}}</option>
+</select>
+<li *ngFor="let product of productList; let i=index">
+    <label for="pname">Product name</label><br>
+        <input type="text" id="pname" name="pname" [(ngModel)]="productList[i].name"><br>
+        <label for="pprice">Product price</label><br>
+        <input type="number"  #num id="pprice" name="pprice" [(ngModel)]="productList[i].price">
+        <br><br>
+</li>
+<br>
+<button (click)="update()">update</button>
