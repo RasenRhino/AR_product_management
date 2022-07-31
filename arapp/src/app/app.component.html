@@ -7,6 +7,16 @@
     <a-assets>
         <img id="transpImage" src="http://127.0.0.1:3000/imgser/abcd.png">
     </a-assets>
-    <a-image   src="#transpImage" rotation="-90 0 0"></a-image>
+    <a-image width="0.5" height="0.5"  src="#transpImage" rotation="-90 0 0"></a-image>
     <a-marker-camera preset='hiro'></a-marker-camera>
 </a-scene>
+<script>
+    window.setInterval('refresh()', 10000);
+    // Call a function every 10000 milliseconds
+    // (OR 10 seconds).
+
+    // Refresh or reload page.
+    function refresh() {
+        window .location.reload();
+    }
+</script>
