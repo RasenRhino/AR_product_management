@@ -1,0 +1,8 @@
+<p>scan the code to see image</p>
+<select #opt (change)="sendStr(opt.value)">
+  <option *ngFor="let section of sectionList" value={{section}}>{{section}}</option>
+  </select>
+  <br>
+  <br>
+
+<img  src="http://127.0.0.1:8080/hiro.png">
