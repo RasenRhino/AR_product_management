@@ -8,7 +8,7 @@ app.get('/genimg/:a',(req,res)=>{
     let b=req.params.a;
     b=b.replace(/\s/g, '\n');
     axios
-    .get('https://api.imgbun.com/png?key=e2868326b70d85c8cf57b1c3e0617b1f&text='+b+'&color=000000&size=16&background=FFFFFF')
+    .get('https://api.imgbun.com/png?key=e2868326b70d85c8cf57b1c3e0617b1f&text='+b+'&color=000000&size=40&background=FFFFFF')
     .then(res => {
       console.log(`statusCode: ${res.status}`);
     //   console.log(res.data.direct_link);
